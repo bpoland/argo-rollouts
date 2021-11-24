@@ -112,6 +112,8 @@
     &--orange#{&}--dark {
         color: $sherbert;
     }
+
+    overflow-wrap: anywhere;
 }
 
 .info {

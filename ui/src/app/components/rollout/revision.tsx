@@ -22,7 +22,8 @@ const ImageItems = (props: {images: ImageInfo[]}) => {
                 if (imageItems.length === 0) {
                     imageItems = [];
                 }
-                return <InfoItemRow key={img.image} label={<ThemeDiv className={`image image--${img.color || 'unknown'}`}>{img.image}</ThemeDiv>} items={imageItems} />;
+                // below replace adds a zero-width-space after colon to allow line break if needed
+                return <InfoItemRow key={img.image} label={<ThemeDiv className={`image image--${img.color || 'unknown'}`}>{img.image.replace(':', ':​')}</ThemeDiv>} items={imageItems} />;
             })}
         </div>
     );
